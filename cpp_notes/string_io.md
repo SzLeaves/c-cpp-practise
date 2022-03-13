@@ -54,6 +54,20 @@ str += str2
 * 比较：直接使用`==`：`str1 == str2`
 
 
-## `string`类I/O
+## 字符串I/O
+* 未被初始化的`char`数组，内容是未定义的，空字符的出现位置也是随机的  
+  对这样的数组使用`strlen()`计算长度可能是不一样的  
+* 未被初始化的`string`对象，长度将被自动设置为0
+* 对于`char`数组，读取一行时使用`cin.getline()`  
+  对于`string`，读取一行时使用`getline()`
+```cpp
+// string使用的getline()
+string str {};
+getline(cin, str);  // 参数：std::istream &__is, std::string &__str
+cout << str << endl << endl;
 
-
+// 与字符串数组使用比较: cin.getline()
+char cstr[20] {};
+cin.getline(cstr, 20);  // 参数：char *__s, std::streamsize __n
+cout << cstr << endl;
+```
