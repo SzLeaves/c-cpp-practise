@@ -15,5 +15,8 @@ int main() {
     st1 = st2;
     cout << "now st1 is: " << st1 << endl;
 
+    // 字符串比较
+    if (st1 == st2)
+        cout << "now str1 is equal str" << endl;
     return 0;
 }
